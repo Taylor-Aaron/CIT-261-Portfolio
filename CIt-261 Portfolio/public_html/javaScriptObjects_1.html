@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Objects Sandbox Code</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <h1>Objects Sandbox Code 2</h1>
+
+        <p id="paintColorOne"></p>
+        <p id="paintColorTwo"></p>
+        <p id="paintColorThree"></p>
+        <p id="paintColorOneTwo"></p>
+        <p id="paintColorOneThree"></p>
+        <p id="paintColorTwoThree"></p>
+
+
+        <script>
+            var paintOne = {
+                color: "Red",
+                showcolor: function () {
+                    return this.color;
+                }
+            };
+            var paintTwo = {
+                color: "Orange",
+                showcolor: function () {
+                    return this.color;
+                }
+            };
+
+            var paintThree = {
+                color: "Violet",
+                showcolor: function () {
+                    return this.color;
+                }
+            };
+            var paintOneTwo = paintOne.showcolor() + "-" + paintTwo.showcolor();
+            var paintOneThree = paintOne.showcolor() + "-" + paintThree.showcolor();
+            var paintTwoThree = paintTwo.showcolor() + "-" + paintThree.showcolor() + " (Which is not a color at all)";
+
+            document.getElementById("paintColorOne").innerHTML = paintOne.showcolor();
+            document.getElementById("paintColorTwo").innerHTML = paintTwo.showcolor();
+            document.getElementById("paintColorThree").innerHTML = paintThree.showcolor();
+            document.getElementById("paintColorOneTwo").innerHTML = paintOneTwo;
+            document.getElementById("paintColorOneThree").innerHTML = paintOneThree;
+            document.getElementById("paintColorTwoThree").innerHTML = paintTwoThree;
+        </script>
+    </body>
+</html>
