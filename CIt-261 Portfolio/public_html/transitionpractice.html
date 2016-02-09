@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+    width: 100px;
+    height: 100px;
+    background: pink;
+    transition-delay: 1s;
+    transition: height 5s;
+   
+}
+
+#div1 {transition-timing-function: ease-in;}
+
+div:hover {
+    height: 300px;
+   }
+</style>
+</head>
+<body>
+
+<p>As with the W3 example I do not imagine this will work on Internet Explorer 9 and earlier.</p>
+
+<div id="div1"></div>
+
+<p>Hover over the pink box. Nothing will happen for one second and then the box expand vertically over five seconds. The animation will start slow but gradually accelerate.<p>
+
+</body>
+</html>
